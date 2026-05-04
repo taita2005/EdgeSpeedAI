@@ -1,0 +1,13 @@
+{
+    "edge_id": "CAM_BD_01",
+    "track_id": 711,
+    "timestamp": "20260504_232443",
+    "speed_kmh": 62,
+    "speed_limit": 60.0,
+    "bounding_box": [
+        536,
+        1014,
+        624,
+        1124
+    ]
+}

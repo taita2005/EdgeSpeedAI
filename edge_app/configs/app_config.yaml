@@ -1,0 +1,31 @@
+# ==========================================
+# CẤU HÌNH THIẾT BỊ BIÊN (EDGE CONFIG)
+# ==========================================
+system:
+  edge_id: "CAM_BD_01"         # Mã định danh của Camera hiện trường
+  debug_mode: false            # Hiện cửa sổ video khi chạy
+
+# ==========================================
+# CẤU HÌNH MÔ HÌNH NHẬN DIỆN
+# ==========================================
+model:
+  path: "models/best.pt"       # File weights YOLO
+  conf_threshold: 0.35         # Ngưỡng tin cậy
+  classes: [0, 1, 2, 3, 4, 5]        # Chỉ bắt xe cộ (Ví dụ COCO: 2=car, 3=motorcycle, 5=bus, 7=truck), 
+
+# ==========================================
+# THÔNG SỐ ĐO LƯỜNG TỐC ĐỘ (SPEED ESTIMATOR)
+# ==========================================
+speed:
+  meter_per_pixel: 0.05        # Hằng số quy đổi khoảng cách pixel sang mét
+  max_hist: 5                  # Số frame lưu lịch sử quỹ đạo để tính vận tốc mượt hơn
+  max_speed: 150               # Tốc độ tối đa hiển thị (lọc nhiễu thuật toán)
+  limit_kmh: 60.0              # NGƯỠNG VI PHẠM (Xe vượt mức này sẽ bị lưu lại)
+  fps: 30                      # Khung hình/giây của camera
+
+# ==========================================
+# KẾT NỐI BACKEND
+# ==========================================
+network:
+  backend_url: "http://localhost:8000/api/v1/upload-violation"  # Địa chỉ API của Server
+  timeout: 5                   # Thời gian chờ phản hồi (giây)

@@ -1,0 +1,12 @@
+# 1. Bỏ qua toàn bộ các file và thư mục ở thư mục gốc
+/*
+
+# 2. Mở khóa (không ignore) file .gitignore để có thể lưu trữ nó lên Git
+!.gitignore
+
+# 3. Mở khóa các file và thư mục bạn yêu cầu
+!LICENSE
+!backend_app/
+!edge_app/
+
+backend_app/storage/

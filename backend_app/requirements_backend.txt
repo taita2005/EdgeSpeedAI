@@ -1,0 +1,7 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+sqlalchemy>=2.0.0
+python-multipart>=0.0.6
+paddleocr>=2.7.0
+paddlepaddle>=2.5.0  # Hoặc paddlepaddle-gpu nếu máy chủ có card NVIDIA
+opencv-python>=4.8.0
